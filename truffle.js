@@ -15,4 +15,24 @@
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
+   networks: {
+    development: {
+      host: 'localhost',
+      port: 9545,
+      network_id: '*', // eslint-disable-line camelcase
+    },
+    
+    ganache: {
+      host: 'localhost',
+      port: 8545,
+      network_id: '*', // eslint-disable-line camelcase
+    },// add more networks here
+    },//networks end here
+    solc: {
+    	optimizer: {
+    		enabled: true,
+    		runs: 200
+    	}
+    }
 };
+
